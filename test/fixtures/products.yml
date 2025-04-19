@@ -1,0 +1,43 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Samambaia 
+  price: 9.99
+  amount: 200
+  unit_measure: g 
+  category: one
+
+two:
+  name: Suculenta
+  price: 20
+  amount: 9.99
+  unit_measure: g
+  category: one
+
+three:
+  name: Orquidea 
+  price: 20
+  amount: 9.99
+  unit_measure: g
+  category: one
+
+four:
+  name: Quaresmeira 
+  price: 20
+  amount: 9.99
+  unit_measure: g
+  category: one
+
+five:
+  name: Aspargo-Alfinete 
+  price: 20
+  amount: 9.99
+  unit_measure: g
+  category: one
+
+six:
+  name: Espadas-de-São-Jorge 
+  price: 20
+  amount: 9.99
+  unit_measure: g
+  category: one

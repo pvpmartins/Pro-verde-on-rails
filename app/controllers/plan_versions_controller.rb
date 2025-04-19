@@ -1,0 +1,2 @@
+class PlanVersionsController < ApplicationController
+end

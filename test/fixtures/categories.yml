@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Plantas
+  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, ad aliquid labore veritatis dolorum fuga error iure id aperiam maiores temporibus voluptate nesciunt dolorem voluptatem praesentium harum officia ullam necessitatibus rerum molestiae numquam, laboriosam ut! Alias reiciendis nam id, itaque tempore architecto blanditiis assumenda officia officiis mollitia iste esse magnam?
+
+
+
+two:
+  name: Solo 
+  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, ad aliquid labore veritatis dolorum fuga error iure id aperiam maiores temporibus voluptate nesciunt dolorem voluptatem praesentium harum officia ullam necessitatibus rerum molestiae numquam, laboriosam ut! Alias reiciendis nam id, itaque tempore architecto blanditiis assumenda officia officiis mollitia iste esse magnam?

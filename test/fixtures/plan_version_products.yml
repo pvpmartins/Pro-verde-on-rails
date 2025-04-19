@@ -1,0 +1,91 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quantity: 2
+  plan_version: one
+  product: one
+
+two:
+  quantity: 4
+  plan_version: two
+  product: two
+
+three:
+  quantity: 1
+  plan_version: one
+  product: three
+
+four:
+  quantity: 3
+  plan_version: one
+  product: four
+
+five:
+  quantity: 4 
+  plan_version: one
+  product: five
+
+six:
+  quantity: 3
+  plan_version: one
+  product: six
+
+seven:
+  quantity: 2
+  plan_version: two
+  product: three
+
+eight:
+  quantity: 2
+  plan_version: two 
+  product: four
+
+nine:
+  quantity: 3
+  plan_version: two 
+  product: five
+
+ten:
+  quantity: 5
+  plan_version: two 
+  product: six
+
+eleven:
+  quantity: 3
+  plan_version: three 
+  product: six
+
+twelve:
+  quantity: 2
+  plan_version: three 
+  product: four 
+
+thirteen:
+  quantity: 1
+  plan_version: three 
+  product: five
+
+fourteen:
+  quantity: 4
+  plan_version: three 
+  product: one 
+
+fifteen:
+  quantity: 6
+  plan_version: four 
+  product: five
+
+sixteen:
+  quantity: 2
+  plan_version: four 
+  product: two 
+
+seventeen:
+  quantity: 1
+  plan_version: four 
+  product:  three
+
+seventeen:
+  quantity: 4
+  plan_version: four 
+  product:   six
