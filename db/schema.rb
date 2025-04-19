@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_04_19_010520) do
+ActiveRecord::Schema[8.0].define(version: 2025_04_19_025734) do
   create_table "addresses", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "street"
@@ -81,6 +81,22 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_19_010520) do
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 
+  create_table "roles", force: :cascade do |t|
+    t.string "name", null: false
+    t.boolean "can_create_product", default: false
+    t.boolean "can_edit_product", default: false
+    t.boolean "can_delete_product", default: false
+    t.boolean "can_create_plan", default: false
+    t.boolean "can_edit_plan", default: false
+    t.boolean "can_delete_plan", default: false
+    t.boolean "can_create_subscription", default: false
+    t.boolean "can_edit_subscription", default: false
+    t.boolean "can_delete_subscription", default: false
+    t.boolean "can_access_admin", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "sessions", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "ip_address"
@@ -108,8 +124,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_19_010520) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
-    t.integer "role", default: 0
+    t.integer "role_id"
     t.index ["email_address"], name: "index_users_on_email_address", unique: true
+    t.index ["role_id"], name: "index_users_on_role_id"
   end
 
   add_foreign_key "addresses", "users"
@@ -122,4 +139,5 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_19_010520) do
   add_foreign_key "sessions", "users"
   add_foreign_key "subscriptions", "plan_frequencies"
   add_foreign_key "subscriptions", "users"
+  add_foreign_key "users", "roles"
 end
