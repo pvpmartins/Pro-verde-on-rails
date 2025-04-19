@@ -1,24 +1,37 @@
-# README
+📦 Project: E-commerce Subscription Platform 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Tech stack: Ruby on Rails (API mode), Inertia.js, Vue.js, PostgreSQL 
 
-Things you may want to cover:
+🔧 Overview 
 
-* Ruby version
+This is a work-in-progress e-commerce application built with Rails and Vue (via Inertia.js). It is designed to support recurring subscription plans, including customer management, plan customization, and an admin interface for managing operations. 
 
-* System dependencies
+🧩 Key Features (Current Stage) 
 
-* Configuration
+Admin Interface: Built-in admin model with custom controllers and routes. 
 
-* Database creation
+Role Delegation System: Currently working on a group-based permission system, where an admin can create teams and delegate responsibilities. 
 
-* Database initialization
+Frontend: Uses Vue.js with Inertia.js to create a modern single-page application experience while keeping Rails as the backend. 
 
-* How to run the test suite
+💡 What Makes This Project Interesting 
 
-* Services (job queues, cache servers, search engines, etc.)
+Focus on real-world business logic like recurring billing and team permissions. 
 
-* Deployment instructions
+Mix of Rails conventions and modern frontend architecture (Inertia bridges backend/frontend without full API complexity). 
 
-* ...
+Project is structured to be scalable and maintainable, following MVC best practices and using service objects when appropriate. 
+
+🚧 Next Steps 
+
+Implementing subscription logic and integration with a payment provider. 
+
+Finishing team permission features. 
+
+Adding automated tests and background jobs for subscription renewals and notifications. 
+
+ 
+
+📎 Repo / Access  
+
+https://github.com/pvpmartins/Pro-verde-on-rails
