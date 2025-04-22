@@ -38,7 +38,7 @@ import SelectButton from "primevue/selectbutton";
 import DataView from "primevue/dataview";
 import Button from "primevue/button";
 import Tag from "primevue/tag";
-//import Admin from '../Layouts/Admin.vue'
+import Admin from '../Layouts/Admin.vue'
 import Main from '../Layouts/Main.vue'
 import Card from 'primevue/card';
 import Select from 'primevue/select';
@@ -97,6 +97,7 @@ createInertiaApp({
       .component("Checkbox", Checkbox)
       .component("Listbox", Listbox)
       .component("Main", Main)
+      .component("Admin", Admin)
       .component("RadioButton", RadioButton)
       .component("Column", Column)
       .component("DataTable", DataTable)

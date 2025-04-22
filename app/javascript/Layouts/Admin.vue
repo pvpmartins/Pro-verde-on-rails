@@ -14,7 +14,7 @@
           <li>
             <Link href="/plants" class="hover:text-gray-200">Plantas</Link>
           </li>
-          <li v-if="currentUser"><Link href="/users/subscriptions " class="hover:text-gray-200">Subscriptions</Link></li>
+          <li v-if="currentUser"><Link href="/admin/subscriptions " class="hover:text-gray-200">Subscriptions</Link></li>
           <li><a href="#" class="hover:text-gray-200">Contact</a></li>
           <Link v-if="!currentUser" href="/users/sign_in"><Button label="Login" class="m-0" @click="" /></Link>
           <div v-if="currentUser?.['first_name']" class="rounded border px-2 py-1">{{ currentUser['first_name'] }}</div>

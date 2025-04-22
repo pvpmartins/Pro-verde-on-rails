@@ -1,0 +1,12 @@
+admin_membership:
+  user_id: <%= ActiveRecord::FixtureSet.identify(:one) %>
+  role_id: <%= ActiveRecord::FixtureSet.identify(:admin) %>
+  created_at: <%= Time.current %>
+  updated_at: <%= Time.current %>
+
+viewer_membership:
+  user_id: <%= ActiveRecord::FixtureSet.identify(:two) %>
+  role_id: <%= ActiveRecord::FixtureSet.identify(:viewer) %>
+  created_at: <%= Time.current %>
+  updated_at: <%= Time.current %>
+

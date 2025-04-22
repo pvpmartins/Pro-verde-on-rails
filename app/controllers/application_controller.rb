@@ -8,7 +8,6 @@ class ApplicationController < ActionController::Base
     email: Current&.session&.user&.email_address, 
     first_name: Current&.session&.user&.first_name,
     last_name: Current&.session&.user&.last_name,
-    user: Current&.session&.user,
     }
   }
   end

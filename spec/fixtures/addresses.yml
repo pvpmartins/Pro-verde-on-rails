@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  street: Rua Florianopolis
+  city: Orobó 
+  state: Maranhão 
+  zip: 1321230
+  country: Brasil 
+  address_type: 0
+  complement: Rua dos Fundos 
+
+two:
+  user: one
+  street: Rua Foo bar
+  city: Orobó
+  state:  Maranhao
+  zip: 645643
+  country: Brazil
+  address_type: 1
+  complement: apartamento 43
+
+two:
+  user: two
+  street: Rua das acacias
+  city: Orobó
+  state: Maranhao
+  address_type: 1
+  zip: 1230912
+  country: Brasil
+  complement: foo

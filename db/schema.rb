@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_04_19_025734) do
+ActiveRecord::Schema[8.0].define(version: 2025_04_21_145640) do
   create_table "addresses", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "street"
@@ -78,6 +78,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_19_025734) do
     t.integer "category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "description"
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 
@@ -95,6 +96,15 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_19_025734) do
     t.boolean "can_access_admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "roles_users", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "role_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["role_id"], name: "index_roles_users_on_role_id"
+    t.index ["user_id"], name: "index_roles_users_on_user_id"
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -136,6 +146,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_19_025734) do
   add_foreign_key "plan_version_products", "products"
   add_foreign_key "plan_versions", "plans"
   add_foreign_key "products", "categories"
+  add_foreign_key "roles_users", "roles"
+  add_foreign_key "roles_users", "users"
   add_foreign_key "sessions", "users"
   add_foreign_key "subscriptions", "plan_frequencies"
   add_foreign_key "subscriptions", "users"

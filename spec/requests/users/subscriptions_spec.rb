@@ -21,12 +21,25 @@ RSpec.describe "Users::Subscriptions", type: :request do
 
     it "renders the index page with user's subscriptions and the correct plan" do
       get users_subscriptions_path
-      puts inertia.props
 
-      expect(inertia.props[:subscriptions][0][:plan][:name]).to eq 'Premium'
+      subscriptions_res = inertia.props[:subscriptions].as_json
 
-      expect(inertia.props[:subscriptions][0][:plan_frequency][:delivery_frequency]).to eq 'biweekly'
-      expect(inertia.props[:subscriptions].all? { |s| s[:status] == 'active' }).to be true
+      expect(subscriptions_res.all? { |s| s["status"] == 'active' }).to be true
+
+      plan_frequency_id = inertia.props[:subscriptions][0]["plan_frequency_id"].as_json
+      get users_subscriptions_path, params: {
+        plan_frequency_id: plan_frequency_id
+      }, headers: {
+        'X-Inertia' => 'true',
+        'X-Inertia-Partial-Component' => 'Users/Subscriptions/Index',
+        'X-Inertia-Partial-Data' => 'plan'
+      }
+
+      plan_res = inertia.props['plan']
+
+      expect(plan_res["name"]).to eq 'Premium'
+
+      expect(plan_res["plan_frequency"]["delivery_frequency"]).to eq 'biweekly'
     end
 
     it "check the subscription status after choosing plan" do
@@ -34,11 +47,12 @@ RSpec.describe "Users::Subscriptions", type: :request do
 
       get success_users_plan_path(plan.id), params: {
         session_id: stripe_session.id,
-        plan_frequency_id: frequency.id
+        plan_frequency_id: frequency.id,
       }
 
       expect(inertia.props[:subscription][:status]).to eq 'active'
     end
+
   end
 end
 

@@ -1,0 +1,38 @@
+admin:
+  name: admin
+  can_create_product: true
+  can_edit_product: true
+  can_delete_product: true
+  can_create_plan: true
+  can_edit_plan: true
+  can_delete_plan: true
+  can_create_subscription: true
+  can_edit_subscription: true
+  can_delete_subscription: true
+  can_access_admin: true
+
+editor:
+  name: editor
+  can_create_product: true
+  can_edit_product: true
+  can_delete_product: false
+  can_create_plan: true
+  can_edit_plan: true
+  can_delete_plan: false
+  can_create_subscription: false
+  can_edit_subscription: true
+  can_delete_subscription: false
+  can_access_admin: true
+
+viewer:
+  name: viewer
+  can_create_product: false
+  can_edit_product: false
+  can_delete_product: false
+  can_create_plan: false
+  can_edit_plan: false
+  can_delete_plan: false
+  can_create_subscription: false
+  can_edit_subscription: false
+  can_delete_subscription: false
+  can_access_admin: false

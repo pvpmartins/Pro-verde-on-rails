@@ -1,0 +1,6 @@
+editor_membership:
+  user_id: <%= ActiveRecord::FixtureSet.identify(:two) %>
+  role_id: <%= ActiveRecord::FixtureSet.identify(:editor) %>
+  created_at: <%= Time.current %>
+  updated_at: <%= Time.current %>
+

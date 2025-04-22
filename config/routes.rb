@@ -14,6 +14,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "users/plans#index"
 
+  inertia 'unauthorized' => 'Admin/Unauthorized'
+
+  resources :products, only: [:index, :show]
+
   resources :plans do
     resources :plan_versions, only: [:index, :new, :create] 
 
@@ -30,6 +34,17 @@ Rails.application.routes.draw do
         get :cancel
       end
     end
+    resources :subscriptions
+  end
+
+  namespace :admin do
+    resources :roles do
+      resources :permissions, only: [:edit, :update]
+      resources :role_users, only: [:create, :destroy]  # To assign users to roles
+    end
+
+    resources :users, only: [:index, :show]
+    resources :products
     resources :subscriptions
   end
 

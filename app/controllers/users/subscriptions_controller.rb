@@ -1,10 +1,8 @@
 class Users::SubscriptionsController < ApplicationController
   def index
-    
-
     render inertia: 'Users/Subscriptions/Index', props: {
       subscriptions: -> {Current.user.subscriptions},
-      plan: InertiaRails.optional {getSubscriptionPlan(params[:plan_id])} 
+      plan: InertiaRails.optional {getSubscriptionPlan(params[:plan_frequency_id])} 
     }
   end
    # render inertia: 'Users/Subscriptions/Index', props: {
@@ -29,12 +27,8 @@ class Users::SubscriptionsController < ApplicationController
    # }
   private
   
-  def foo
-    puts 'FOOBAR'
-  end
-
-  def getSubscriptionPlan(plan_id)
-    plan_frequency = PlanFrequency.includes(:plan).find(plan_id)
+  def getSubscriptionPlan(plan_frequency_id)
+    plan_frequency = PlanFrequency.includes(:plan).find(plan_frequency_id)
     {
       
         id: plan_frequency.plan.id,

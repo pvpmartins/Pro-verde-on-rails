@@ -6,6 +6,7 @@ one:
   amount: 200
   unit_measure: g 
   category: one
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolorum iusto placeat cum quos, laudantium perferendis suscipit voluptate voluptatibus nostrum ut, velit mollitia consequuntur adipisci assumenda blanditiis harum? Quae earum dolorum vel mollitia aut repellendus, ab odit tempora incidunt sunt similique, eaque amet quas accusantium saepe dolor asperiores laudantium corrupti.
 
 two:
   name: Suculenta
@@ -13,6 +14,7 @@ two:
   amount: 9.99
   unit_measure: g
   category: one
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolorum iusto placeat cum quos, laudantium perferendis suscipit voluptate voluptatibus nostrum ut, velit mollitia consequuntur adipisci assumenda blanditiis harum? Quae earum dolorum vel mollitia aut repellendus, ab odit tempora incidunt sunt similique, eaque amet quas accusantium saepe dolor asperiores laudantium corrupti.
 
 three:
   name: Orquidea 
@@ -20,6 +22,7 @@ three:
   amount: 9.99
   unit_measure: g
   category: one
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolorum iusto placeat cum quos, laudantium perferendis suscipit voluptate voluptatibus nostrum ut, velit mollitia consequuntur adipisci assumenda blanditiis harum? Quae earum dolorum vel mollitia aut repellendus, ab odit tempora incidunt sunt similique, eaque amet quas accusantium saepe dolor asperiores laudantium corrupti.
 
 four:
   name: Quaresmeira 
@@ -27,6 +30,7 @@ four:
   amount: 9.99
   unit_measure: g
   category: one
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolorum iusto placeat cum quos, laudantium perferendis suscipit voluptate voluptatibus nostrum ut, velit mollitia consequuntur adipisci assumenda blanditiis harum? Quae earum dolorum vel mollitia aut repellendus, ab odit tempora incidunt sunt similique, eaque amet quas accusantium saepe dolor asperiores laudantium corrupti.
 
 five:
   name: Aspargo-Alfinete 
@@ -34,6 +38,7 @@ five:
   amount: 9.99
   unit_measure: g
   category: one
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolorum iusto placeat cum quos, laudantium perferendis suscipit voluptate voluptatibus nostrum ut, velit mollitia consequuntur adipisci assumenda blanditiis harum? Quae earum dolorum vel mollitia aut repellendus, ab odit tempora incidunt sunt similique, eaque amet quas accusantium saepe dolor asperiores laudantium corrupti.
 
 six:
   name: Espadas-de-São-Jorge 
@@ -41,3 +46,4 @@ six:
   amount: 9.99
   unit_measure: g
   category: one
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolorum iusto placeat cum quos, laudantium perferendis suscipit voluptate voluptatibus nostrum ut, velit mollitia consequuntur adipisci assumenda blanditiis harum? Quae earum dolorum vel mollitia aut repellendus, ab odit tempora incidunt sunt similique, eaque amet quas accusantium saepe dolor asperiores laudantium corrupti.

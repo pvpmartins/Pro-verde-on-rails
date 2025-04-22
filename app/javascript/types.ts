@@ -36,6 +36,7 @@ export interface Product {
   unit_measure: number
   category: string
   price: number
+  description: string
 }
 
 export interface Subscription {

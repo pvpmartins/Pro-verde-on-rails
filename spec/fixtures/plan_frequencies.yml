@@ -1,0 +1,30 @@
+one:
+  plan: one
+  frequency_type: :weekly
+  price: 299.99
+
+two:
+  plan: one
+  frequency_type: :biweekly
+  price: 157.99
+
+three:
+  plan: one
+  frequency_type: :monthly
+  price: 69.99
+
+four:
+  plan: two
+  frequency_type: :weekly
+  price: 199.99
+
+five:
+  plan: two
+  frequency_type: :biweekly
+  price: 107.99
+
+six:
+  plan: two
+  frequency_type: :monthly
+  price: 49.99
+

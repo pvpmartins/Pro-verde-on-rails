@@ -13,7 +13,7 @@
             </div>
         </template>
     <template #content>
-        <label v-if="!subscriptionsObj?.[sub.id]" @click="getPlanDetails(sub.plan_frequency_id, sub.id)" class="w-fit mx-auto block hover:text-blue-700 cursor-pointer">Mais dados:</label>
+        <label v-if="!subscriptionsObj?.[sub.id]" @click="getSubscriptionDetails(sub.plan_frequency_id, sub.id)" class="w-fit mx-auto block hover:text-blue-700 cursor-pointer">Mais dados:</label>
         <div v-if="subscriptionsObj?.[sub.id]" class="flex justify-between gap-4 h-[4rem] items-center bg-[#737373] px-3">
             <label for=""> Plano: {{ subscriptionsObj?.[sub.id]?.name}}</label>
             <label for="">Frequência: {{ freqPtBr[subscriptionsObj?.[sub.id]?.plan_frequency.delivery_frequency] }}</label>
@@ -36,7 +36,7 @@ const props = defineProps<{subscriptions: Subscription[], plan}>()
 const subscriptionsObj = reactive<Record<number,SubscriptionPlan>>({})
 
 const freqPtBr = {monthly: 'Mensal', weekly: 'Semanal', biweekly: 'Quinzenal'}
-const getPlanDetails = (planId: number, subId: number) => {
+const getSubscriptionDetails = (planId: number, subId: number) => {
     router.get('/users/subscriptions', {
         plan_id:planId
     },

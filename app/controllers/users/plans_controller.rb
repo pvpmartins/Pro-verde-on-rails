@@ -73,8 +73,6 @@ class Users::PlansController < ApplicationController
 
   def create_checkout_session
     # Create Stripe Checkout session
-
-    puts "PARAMSS #{params}"
     frequency = PlanFrequency.find(params[:frequency_id])
 
     session = Stripe::Checkout::Session.create({
@@ -104,7 +102,6 @@ class Users::PlansController < ApplicationController
 
   def success
     # Retrieve the session information from Stripe
-    puts "SUCCESS PARAMS #{params}"
     session = Stripe::Checkout::Session.retrieve(params[:session_id])
     user = Current.user  # Assuming you have a current_user method or use Devise
 
@@ -118,9 +115,6 @@ class Users::PlansController < ApplicationController
       plan_frequency: plan_frequency,
       status: :active
     )
-
-
-    puts "SUBSCRIPTION #{subscription.as_json(methods: [:status])}" 
 
     render inertia: 'Users/Subscriptions/Success', props: { plan: subscription.plan, subscription: subscription.as_json(only: [:id, :start_date, :status, :plan_frequency_id]), plan_frequency: plan_frequency }
   end
